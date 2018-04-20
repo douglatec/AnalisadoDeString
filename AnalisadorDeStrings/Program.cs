@@ -9,26 +9,28 @@ namespace AnalisadorDeStrings
 {
     class Program
     {
+
+        public static string[] report = new string[300];
+
+
         static void Main(string[] args)
         {
 
-            string[] report;
-
-            Console.WriteLine("Digite o modelo do rastreador: ");
-            string modeloRastreador = Console.ReadLine();
-            if (modeloRastreador == "suntech")
+            while(true)            
             {
-                string[] separador = { ";" };
-                Console.WriteLine("Digita a string a ser analisada: ");
-                string str = Console.ReadLine();
-                report = str.Split(separador, StringSplitOptions.RemoveEmptyEntries);
-                Rastreador rast = new Rastreador(modeloRastreador, separador, report);
+
+                Console.Clear();
+                Tela.menu();
+                Tela.suntech();
+                Console.ReadLine();
+            
             }
 
-            Tela.suntech();
+            
 
-            Console.ReadLine();
+           
 
+                
         }
     }
 }
